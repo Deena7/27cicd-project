@@ -23,12 +23,12 @@
 <body>
 
     <header class="header">
-        <h1>Welcome to FINAL DEVOPS PROJECT - Web Application</h1>
-        <p>Your modern UI powered by HTML & CSS</p>
+        <h1>Welcome to FINAL DEVOPS PROJECT - Web Application Page</h1>
+        <p>our web page powered by HTML & CSS</p>
     </header>
 
     <!-- New Button -->
-    <button id="showVideoBtn">readya guys</button>
+    <button id="showVideoBtn">Readya guys</button>
 
     <section class="demo" id="demo">
   <div class="wrap demo-grid">
@@ -63,14 +63,26 @@
           <h3>PROJECT SUMMARY</h3>
           <p>Automated CI/CD Deployment with Jenkins, Docker & K3s.</p>
 
-          <h4>Controls</h4>
+          <h4>AUTOMATION:</h4>
           <ol>
-              <li>Play / Pause</li>
-              <li>Seek using progress bar</li>
-              <li>Toggle fullscreen (bottom-right control)</li>
+              <li>code push from git to github</li>
+              <li>jenkins pull the code from github to store workspace</li>
+              <li>then jenkins builds the docker image using dockerfile</li>
+              <li>now docker image pushing into dockerhub</li>
+              <li>finally k3s-server pull the image & run a container as pods</li>
+              <li>check a webpage using k3s-server:nodeport in browser</li>
           </ol>
 
-          <p class="muted">If playback fails, convert your video to MP4 (H.264) or add WebM fallback.</p>
+          <p class="muted">THAT'S ALL ABOUT ENTRY LEVEL CICD PROJECT</p>
+
+<!-- IMAGE 5 BELOW TEXT -->
+<div class="info-bottom-image">
+    <img src="image5.png" alt="Final CICD Deployment Image">
+    <p class="info-image-caption">
+        🎉 padichi interview la clear panra velaya paru 🎉
+    </p>
+</div>
+
       </aside>
   </div>
 </section>
@@ -111,3 +123,4 @@ video.addEventListener('ended', () => {
 
 </body>
 </html>
+
