@@ -3,18 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Profile Card</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WELCOME TO MY CICD PROJECT - WEB APPLICATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Optional: style for the new button */
+        #showVideoBtn {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0033cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="profile-image"></div>
-        <h1>Alex Rivera</h1>
-        <p class="title">Frontend Developer</p>
-        <p class="description">Passionate about creating clean, interactive web experiences and learning new technologies.</p>
-        <button class="contact-btn">Get in Touch</button>
-    </div>
+    <header class="header">
+        <h1>Welcome to FINAL DEVOPS PROJECT - Web Application</h1>
+        <p>Your modern UI powered by HTML & CSS</p>
+    </header>
+
+    <!-- New Button -->
+    <button id="showVideoBtn">readya guys</button>
+
+    <section class="demo" id="demo">
+  <div class="wrap demo-grid">
+
+      <!-- LEFT SIDE -->
+      <div class="video-wrap">
+
+          <video id="demoVideo" class="video" preload="metadata" controls playsinline poster="poster.jpg" style="display:none;">
+              <source src="video.mp4" type="video/mp4">
+          </video>
+
+          <!-- Overlay -->
+          <button id="overlayPlay" class="overlay-play" style="display:none;">
+              <svg viewBox="0 0 80 120" width="40" height="60">
+                  <circle cx="40" cy="60" r="35" fill="rgba(0,0,0,0.5)"/>
+                  <polygon points="35,45 55,60 35,75" fill="#fff"/>
+              </svg>
+          </button>
+
+          <!-- 2 × 2 IMAGE GRID -->
+          <div class="image-grid-2x2">
+              <img src="image1.jpg" alt="image1">
+              <img src="image2.jpg" alt="image2">
+              <img src="image3.jpg" alt="image3">
+              <img src="image4.jpg" alt="image4">
+          </div>
+
+      </div> <!-- END LEFT CONTAINER -->
+
+      <!-- RIGHT SIDE (INFO PANEL) -->
+      <aside class="info">
+          <h3>PROJECT SUMMARY</h3>
+          <p>Automated CI/CD Deployment with Jenkins, Docker & K3s.</p>
+
+          <h4>Controls</h4>
+          <ol>
+              <li>Play / Pause</li>
+              <li>Seek using progress bar</li>
+              <li>Toggle fullscreen (bottom-right control)</li>
+          </ol>
+
+          <p class="muted">If playback fails, convert your video to MP4 (H.264) or add WebM fallback.</p>
+      </aside>
+  </div>
+</section>
+
+
+    <script>
+const btn = document.getElementById('showVideoBtn');
+const video = document.getElementById('demoVideo');
+const overlay = document.getElementById('overlayPlay');
+
+// Show video when "ready guys" is clicked
+btn.addEventListener('click', () => {
+    video.style.display = 'block';
+    overlay.style.display = 'block';
+    btn.style.display = 'none';
+});
+
+// When overlay play button is clicked -> play video
+overlay.addEventListener('click', () => {
+    video.play();
+});
+
+// When video starts playing -> hide overlay button
+video.addEventListener('play', () => {
+    overlay.style.display = 'none';
+});
+
+// When video is paused -> show overlay button again
+video.addEventListener('pause', () => {
+    overlay.style.display = 'block';
+});
+
+// When video ends -> show overlay again
+video.addEventListener('ended', () => {
+    overlay.style.display = 'block';
+});
+</script>
 
 </body>
 </html>
