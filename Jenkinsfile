@@ -15,6 +15,13 @@ pipeline {
                     url: 'https://github.com/Deena7/27cicd-project'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                sh """
+                  docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+                """
+            }
+        }
     } 
 }
 
