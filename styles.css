@@ -1,0 +1,64 @@
+/* Resetting default margins and setting a font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* The card container */
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* A simple colored circle for a profile placeholder */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #6e8efb, #a777e3);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.title {
+    color: #6e8efb;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.contact-btn {
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #5a7be3;
+}
