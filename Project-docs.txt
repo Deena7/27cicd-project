@@ -1,0 +1,48 @@
+
+server-1
+================
+curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+apt update
+apt install docker.io -y
+systemctl start docker
+systemctl enable docker
+curl -LO https://dl.k8s.io/release/v1.29.0/bin/linux/amd64/kubectl
+chmod +x kubectl
+mv kubectl /usr/local/bin/
+
+
+server-2
+=========
+sudo apt update && sudo apt -y upgrade
+curl -sfL https://get.k3s.io | sh -
+sudo kubectl get nodes
+sudo cat /etc/rancher/k3s/k3s.yaml > /home/ubuntu/kubeconfig
+sudo chown ubuntu:ubuntu /home/ubuntu/kubeconfig
+
+
+https://github.com/Deena7/cicd-project-repo.git -  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
+deena7 - dckr_pat_dbMzbzFX-h4GJ9VADD0Vl2cUlyc
+
+
+
+Plugin	                                   Why?
+Kubernetes CLI Plugin	             kubectl support
+Docker Pipeline Plugin	           Build/push image
+Git Plugin	                       Pull repo via SSH
+GitHub Integration Plugin	         Webhook trigger
+Credentials Binding Plugin	       Manage secrets
+Pipeline Plugin	                   For Jenkinsfile
+
+
+k3s-config - cat /etc/rancher/k3s/k3s.yaml --> replace ip with "kubectl get nodes -o wide"  - internal ip
+(saved as file -  name with k3s-config)
+                     |                 
+dockerhub-creds   - deena7 - dckr_pat_dbMzbzFX-h4GJ9VADD0Vl2cUlyc
+github-creds      - Deena7 - (personal access token)
+
+
+chmod 644 video.mp4  ==== change video file permission
+
+
